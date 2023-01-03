@@ -1,0 +1,47 @@
+// functional button of section functionnment
+
+.functional_btn{
+    @include flex(row,space-evenly);
+    @include typography(13px,700);
+    box-shadow: $shadow-button;
+    width:calc($width * 0.9);
+    background-color: map-get($colors,gray);
+    border-radius: 25px;
+    padding: 15px 15px;
+    margin: auto;
+    margin-bottom: 35px;
+    position: relative;
+   
+   &::before{
+     @include flex(row,center);
+     content: counter(list-item);
+     @include size(24px,24px);
+     position: absolute;
+     top:50%;
+     margin-top: -12px;
+     left: -10px;
+     color: map-get($colors,white-color);
+     border-radius: 50%;
+     background-color: map-get($colors,primaire);
+   }
+   
+   &:hover{
+     background-color:lighten(map-get($colors,primaire),35%);
+     transition: transform 125ms;
+     transform: translateY(-10px);
+          i{
+            color:map-get($colors,primaire);
+          }
+  }
+  
+   >.icon{
+     font-size: 22px;
+     color:map-get($colors,gray-color);
+   }
+
+   h2{
+    color:map-get($colors,dark-gray);
+   }
+  
+  }
+  

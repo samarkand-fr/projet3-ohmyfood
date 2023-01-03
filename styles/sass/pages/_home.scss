@@ -1,0 +1,77 @@
+
+@import '../components/location';
+@import '../components/buttons';
+@import '../components/cards';
+
+// wrapper of the whole page
+  .wrapper {
+    width: $width;
+    margin: 0 ;
+    overflow-x: hidden;
+  }
+
+//   home page proposition section 
+.home{
+   @include flex(column,center);
+   background-color: map-get($colors,gray);
+
+    &_title{
+      @include typography(25px,600);
+      width: calc($width*0.7);
+      margin-top: 30px;
+      text-align: center;
+   }
+
+      &_sub_title{
+      @include typography(18px,400);
+      text-align: center;
+      color:lighten(map-get($colors,dark-gray),20%);
+      padding-bottom: 10px;
+      margin-top: -10px;
+  
+   }
+}
+
+// main home button
+  .main_btn{
+   width:fit-content;
+   @include typography(18px,400);
+   @include button;
+}
+
+
+// ---------functionnal section-------
+.functional_section{
+    padding: 10px 0px ;
+    margin: auto;
+
+    &__title{
+      @include typography(x-large,600);
+      margin-left: 5px;
+      padding: 20px 10px 15px 10px;
+    }
+}
+
+// ----------restaurant section----------
+.restaurant_section{
+   @include flex(column,center);
+    width: $width;
+    background-color: map-get($colors,gray);
+    padding: 10px 0px;
+    gap:10px;
+  
+   > h1{
+        @include typography(x-large,600);
+        align-self: flex-start;
+        padding-left: 15px;
+        padding-top: 20px;
+        margin-bottom: 20px;
+   }
+  }
+
+ .resto_card_wrapper{
+  @include flex(column,center);
+  width: $width;
+  }
+
+

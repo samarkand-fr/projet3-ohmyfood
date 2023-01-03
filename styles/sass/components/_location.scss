@@ -1,0 +1,71 @@
+
+.location{
+        @include flex(row,center);
+        border-top:$border;
+        outline: none;
+        padding:10px ;
+        background-color: map-get($colors,extra-light-gray);
+        width: $width;
+        margin-top: -15px;
+        
+        & .icon{
+              @include size(30px,30px);
+              align-self: baseline;
+              font-size: 20px;
+              margin-left: 15px;
+              color: map-get($colors,dark-gray);
+                 &:hover{
+                  color:map-get($colors,primaire);
+                  animation: fliper 3s ease-in-out
+                 }
+                  }
+        input {
+            @include typography(20px,400);
+                border: none;
+                background:map-get($colors,extra-light-gray) ;
+                padding:  5px;
+                margin-top: 5px;
+                text-align: center;
+                width: 180px;
+                margin-left: -10px;
+                align-self: baseline;
+                color:map-get($colors,dark-gray);
+              
+                  
+               &[type="search"]{
+                    height: 30px;
+                    &:focus{
+                      background-color: map-get($colors,extra-light-gray);
+                      color: inherit;
+                      outline: none;
+                      border-bottom: 1px solid map-get($colors,primaire) ;
+                      box-shadow: 0 1px 0 0 map-get($colors,primaire) ;
+                    }
+                    &:active{
+                      background-color:map-get($colors,extra-light-gray);
+                      color: inherit;
+                    }
+                    &:-webkit-autofill{
+                      box-shadow: 0 0 0px 1000px map-get($colors,extra-light-gray) inset;
+                      -webkit-box-shadow: 0 0 0px 1000px  map-get($colors,extra-light-gray) inset;
+                      &:hover{
+                        box-shadow: 0 0 0px 1000px map-get($colors,extra-light-gray)  inset;
+                        -webkit-box-shadow: 0 0 0px 1000px map-get($colors,extra-light-gray) inset;
+                      }
+                      &:focus{
+                        box-shadow: 0 0 0px 1000px map-get($colors,extra-light-gray)  inset;
+                        -webkit-box-shadow: 0 0 0px 1000px map-get($colors,extra-light-gray)  inset;
+                      }
+                    }
+                }          
+            }
+}
+
+
+
+
+
+
+
+
+

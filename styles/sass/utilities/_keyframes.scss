@@ -1,0 +1,113 @@
+// animation for loading menu
+
+@keyframes animate-glow {
+  0% {
+    opacity: 0;
+    filter: brightness(3) saturate(3);
+    transform: scale(0.8, 0.8);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1) saturate(1);
+    transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes animate-fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes animate-fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// animation for landing  the home page with fade
+@keyframes openning {
+  0%{
+      opacity: 0;
+  }
+  50%{
+      opacity: 0.2;
+  }
+
+  70%{
+      opacity: 0.7;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+
+// animation of spinner makes it disappear
+@keyframes disapear {
+  to {
+    opacity: 0;
+  }
+}
+
+// animation of three balls of spinner
+
+@keyframes grow{
+  0%{
+    @include transform(scale(1));
+    background-color: map-get($colors,primaire);
+  }
+  50%{
+    background-color: map-get($colors,secondaire);
+  }
+  100%{
+    @include transform(scale(.2));
+    background-color: map-get($colors,Tertiaire);
+  }
+}
+
+
+// animation of icon location
+@keyframes fliper {
+  from{
+      transform:translateX(-25%) rotate(0deg);
+  }
+ to{
+      transform:translateX(-25%) rotate(360deg);
+  }
+}
+
+
+// animation for card restaurant on word "nouveau"
+
+@keyframes wiggle {
+  0%, 7% {
+    @include transform(rotateZ(0));
+  }
+  15% {
+   @include transform(rotateZ(-15deg));
+  }
+  20% {
+    @include transform(rotateZ(10deg));
+  }
+  25% {
+    @include transform(rotateZ(-10deg));
+  }
+  30% {
+    @include transform(rotateZ(6deg));
+  }
+  35% {
+    @include transform(rotateZ(-4deg));
+  }
+  40%, 100% {
+    @include transform(rotateZ(0deg));
+  }
+}
+
+
+
+

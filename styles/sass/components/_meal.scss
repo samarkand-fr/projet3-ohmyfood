@@ -1,0 +1,97 @@
+
+.meal{
+  width: $width;
+  overflow: hidden;
+  padding: 5px 15px;
+
+  // ----entree -----plat -----dessert
+    &__header{
+      @include typography(17px,400);
+      color: lighten(map-get($colors,dark-gray),20%);
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 10px;
+     
+      // ----underline color aqua -----
+          &::after {
+            content: "";
+            position: absolute;
+            @include transform (translateY(25px));
+            width:40px;
+            border: 2px solid map-get($colors,Tertiaire);
+            position:absolute;
+            left: -1px;
+          }
+        } 
+}
+
+// menu item of meals proposed-------
+
+.menuItem {
+  @include boxshadow;
+  border-radius: $border_radius;
+  background-color:map-get($colors,white-color);
+  padding: 15px;
+  display: flex;
+  margin:17px 0;
+  box-shadow:$shadow-meal;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+ 
+    &__wrapper {
+      @include longtext;
+      flex: 1;
+      
+    }
+
+    &__title {
+      @include typography(18px,500);
+      @include longtext;
+      margin: 0;
+      margin-bottom: 5px;
+    }
+
+    &__description {
+      @include typography(15px,400);
+      @include longtext;
+      color:lighten(map-get($colors,dark-gray),20%);
+      margin:0;
+    }
+
+    &__price {
+      align-self: flex-end;
+      padding-left: 5px;
+      margin-right: 10px;
+      font-weight: normal;
+    }
+    
+    &__confirmation {
+      @include flex(row,center);
+      @include size(60px,100%);
+      position: absolute;
+      top:0;
+      right: -60px;
+      background-color:map-get($colors,Tertiaire);
+    }
+
+    &:hover &__confirmation , &:hover &__price {
+      margin-right: 60px;
+      transition-duration: 0.5s;
+    }
+
+  &__wrapIcon {
+    @include flex(row,center);
+    @include transform(rotate(360deg));
+    @include size(25px,25px);
+    border-radius: 55px;
+    background-color: map-get($colors,white-color);
+    transition-duration: 0.5s;
+  }
+  &:hover &__wrapIcon {
+    @include transform(rotate(0));
+    }
+  &__icon {
+    color: map-get($colors,Tertiaire);
+  }
+}

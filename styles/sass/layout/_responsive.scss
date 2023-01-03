@@ -1,0 +1,150 @@
+  // desktop ******************************
+  
+  @include  desktop {
+
+    .wrapper{
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    // header
+    .header{
+     text-align: center;
+
+     &_img{
+        width: calc($width*0.6);
+      }
+      
+     &_arrow{
+      @include arrow(300px,30px);
+     }
+    }
+
+    // home page
+   
+    .functional_section{
+      &__title {
+        text-align: center;
+        padding: 30px 0;
+      }
+
+      ul {
+        @include flex(row,space-evenly);
+        gap:20px;
+      }
+      
+    .functional_btn {
+     @include size(100%,auto);
+      margin-left: 20px;
+      gap: 15px;
+      margin: auto;
+     
+      }
+      
+    }
+    .restaurant_section{
+      h1{
+        align-self: center;
+        padding: 30px 0;
+      }
+    }
+    .resto_card_wrapper{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:15px;
+      place-items: center;
+    }
+ 
+// restaurant page
+
+    .resto{
+      &_img{
+        @include size(60%,450px);
+       border-radius: $border_radius;
+       margin-top: 15px;
+      }
+      
+     &_title{
+      @include transform(translateX(-80px));
+      justify-content: center;
+      margin: 20px;
+
+      .heart{
+      margin-right: 190px;
+      }
+    }
+  }
+
+    .wrapper_meals {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap:15px;
+    }
+
+
+  
+  //  footer
+
+   .footer{
+      ul {
+      @include flex (row,space-evenly);
+      align-items: center;
+      }
+
+      li:nth-child(1){
+        margin-top: 25px;
+      }
+   }
+}
+   
+   
+  // tablet ***************************************
+@include tablet {
+
+  // header
+  .header{
+    text-align: center;
+    &_img{
+      width: calc($width*0.6);
+    }
+    &_arrow{
+      @include arrow(200px,30px);
+     }
+     .heart{
+      margin-right: 0px;
+      }
+} 
+
+// home page
+.resto_card_wrapper{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:15px;
+  place-items: center;
+}
+
+// resto page
+.resto{
+  &_img{
+    @include size(60%,350px);
+   border-radius: $border_radius;
+   margin-top: 15px;
+  }
+    
+  &_title{
+    @include transform(translateX(-40px));
+    justify-content: center;
+    margin: 20px;
+}
+}
+.wrapper_meals {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap:15px;
+}
+ .footer ul {
+  display: inline-flex;
+  flex: 1;
+  gap: 40px;
+ }
+}

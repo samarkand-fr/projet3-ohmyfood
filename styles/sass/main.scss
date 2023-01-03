@@ -1,0 +1,19 @@
+/// it should ONLY contain the imports for the above files.
+
+@import './base/resets';
+@import './base/typography';
+
+@import './utilities/variables';
+@import './utilities/mixins';
+
+@import '../sass/components/animations';
+
+@import './layout/header';
+@import './pages/home';
+@import './components/heart';
+@import './pages/resto';
+@import './layout/footer';
+
+@import './layout/responsive';
+
+

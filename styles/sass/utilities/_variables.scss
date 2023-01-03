@@ -1,0 +1,37 @@
+
+// --------colors----------
+// map-get($colors,primaire)
+$colors:(
+    primaire:#9356DC,
+    secondaire:#FF79DA,
+    Tertiaire:#99E2D0,
+    white-color:#FFFFFF,
+    gray:#f2f2f2,
+    light-gray:#DCDCDC,
+    extra-light-gray:#eaeaea,
+    gray-color:#4d4d4d,
+    dark-gray:#454545,
+    green-color:green,
+
+);
+
+// ------width--------
+$width:100%;
+$width-spinner: 250px;
+
+// -----------fonts-----------
+ $fontfamily: "Roboto",sans-serif;
+ $logo-family: "Shrikhand",sans-serif;
+
+//  -----borders-------
+ $border_radius:15px;
+ $border:3px solid rgba(127, 126, 126, 0.182);
+
+// -------shadows-------
+ $shadow-meal: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+ $shadow-button: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+// ----query------
+$tablet-width: 768px;
+$desktop-width: 1024px;
+

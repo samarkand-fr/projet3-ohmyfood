@@ -1,0 +1,21 @@
+.header{
+    @include flex(row,center);
+    background-color:map-get($colors,white-color);
+    margin-top: 20px;
+    padding: 25px 5px;
+    margin:auto;
+    width:calc($width * 0.5);
+    
+
+    &_img{
+        @include image;
+        }
+        
+    &_arrow {
+        @include arrow(25px,30px);
+
+            &:hover{
+                color: map-get($colors,primaire);
+            }
+        }
+}

@@ -1,0 +1,100 @@
+// button of (main page and command )
+@mixin button {
+  padding: 15px 20px;
+  border-radius: 40px;
+  color: map-get($colors,white-color);
+  border:none;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 50px;
+  box-shadow: 2px 2px  map-get($colors,light-gray);
+  background-image: linear-gradient( to bottom right, map-get($colors,secondaire), map-get($colors,primaire) );
+
+  &:hover {
+    background-color: lighten(map-get($colors,primaire), 10%);
+    background-blend-mode: lighten;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+  
+// position  @include flex(row,center)
+@mixin flex($direction,$content-position){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content-position;
+    align-items: center;
+
+}
+
+
+
+/// to size an element
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+  }
+
+///wrap longtext
+  @mixin longtext{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  ///fonts
+  @mixin typography($fontsize,$fontweight){
+    font-size: $fontsize;
+    font-weight: $fontweight;
+
+  }
+
+  // @include transform(rotate(45deg))
+  @mixin transform($property){
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform:$property;
+  }
+
+ @mixin boxshadow{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   
+ }
+
+  // media query 
+  @mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+      @content;
+    }
+  }
+
+// mixin for image
+@mixin image{
+  width: $width;
+  object-fit: cover;
+}
+
+//@include arrow(20px,10px)
+//mixin positioned the arrow in header section
+@mixin arrow($left,$top){
+  position: absolute;
+  font-size: 20px;
+  left:$left;
+  top:$top;
+}
+
+
+
+
+
+
+
+
+
+
+

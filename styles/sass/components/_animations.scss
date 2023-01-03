@@ -1,0 +1,103 @@
+@import '../utilities/keyframes';
+
+
+// animation demarage de page
+.start_up_page {
+  animation: openning 2000ms;
+}
+
+
+// animation of  menu restaurant
+.animate {
+    animation-duration: 0.75s;
+    animation-name: animate-fadein;
+    animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+    animation-fill-mode: backwards;
+
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        animation-delay: 200ms * $i;
+      }
+      }
+  }
+  
+  /* Glow In */
+  .animate.glow {
+    animation-name: animate-glow;
+    animation-timing-function: ease;
+  }
+  
+  @keyframes animate-glow {
+    0% {
+      opacity: 0;
+      filter: brightness(3) saturate(3);
+      transform: scale(0.8, 0.8);
+    }
+    100% {
+      opacity: 1;
+      filter: brightness(1) saturate(1);
+      transform: scale(1, 1);
+    }
+  }
+
+ 
+  
+//  spinner loader    ----------------
+
+  .loader {
+    @include flex(row,center);
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      pointer-events: none;
+      background-color: map-get($colors,white-color);
+      animation: disapear 1s 3s forwards;
+    }
+    
+    .ball-loader{
+      width: $width-spinner;
+      height: calc($width-spinner / 3);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      display: flex;
+    }
+    
+    .ball-loader-ball{
+      will-change: transform;
+      @include size(calc($width-spinner / 11 * 3),calc($width-spinner / 11 * 3));
+      // height: calc($width-spinner / 11 * 3);
+      // width: calc($width-spinner / 11 * 3);
+      border-radius: 50%;
+      background-color: map-get($colors,primaire);
+      display: inline-block;
+      animation: grow 1s ease-in-out infinite alternate;
+      transform-origin: 50% 50%;
+      
+      &.ball1{
+        margin-right: calc($width-spinner / 11);
+      }
+      
+      &.ball2{
+        margin-right: calc($width-spinner / 11);
+        animation-delay: - .33s;
+      }
+      
+      &.ball3{
+        animation-delay: - .66s;
+      }
+    }
+    
+    
+
+
+
+
+
+
+
+
