@@ -5,9 +5,9 @@
     @include typography(13px,700);
     box-shadow: $shadow-button;
     width:calc($width * 0.9);
-    background-color: map-get($colors,gray);
+    background-color: map-get($colors,gray-color);
     border-radius: 25px;
-    padding: 15px 15px;
+    padding: 12px 15px;
     margin: auto;
     margin-bottom: 35px;
     position: relative;
@@ -32,14 +32,15 @@
           i{
             color:map-get($colors,primaire);
           }
-  }
+   }
   
    >.icon{
      font-size: 22px;
-     color:map-get($colors,gray-color);
+     color:lighten(map-get($colors,dark-gray),30%);
    }
 
    h2{
+    @include typography(18px,500);
     color:map-get($colors,dark-gray);
    }
   

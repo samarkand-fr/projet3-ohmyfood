@@ -4,6 +4,7 @@
   cursor: pointer;
   right: 25px;
   font-size: 30px;
+  color: map-get($colors,dark-gray);
 
   &__empty {
     position: absolute;

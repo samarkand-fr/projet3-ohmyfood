@@ -1,12 +1,13 @@
 
 .resto_card{
-    width: calc($width * 0.9);
-    max-height: 300px;
+    width: calc($width * 0.95);
+    max-height: 285px;
     background-color: map-get($colors,white-color);
     position: relative;
     margin-bottom: 15px;
     border-radius: 20px;
     filter: drop-shadow(0px 3px rgba(0, 0, 0, 0.1));
+
     & img {
        @include image;
         height: 200px;
@@ -14,42 +15,39 @@
         border-top-right-radius: 15px;
     }
    
-  &_title{
-   @include flex(row,space-between);
-   color: map-get($colors,dark-gray);
-  }
-  
-
-&_text h2{
-  @include typography(20px,700);
-  color: map-get($colors,dark-gray);
-  padding-left: 15px;
-  padding-bottom: 15px;
-}
-
-&_text h3{
-   @include typography(18px,400);
-   color: lighten(map-get($colors,dark-gray),10%);
-   padding-left: 15px;
-   margin-top: -20px;
-}
-// first and second card contains the word nouveau
-&:nth-child(-n+2){
-    &::before{
-      @include typography(14px,600);
-      content: "Nouveau";
-      @include size(50px,20px);
-      top:15px;
-      right: 10px;
-      z-index: 999;
-      background-color:map-get($colors,Tertiaire);
-      padding: 5px 25px 5px 15px;
-      color:map-get($colors,green-color);
-      position: absolute;
-      transform-origin: 50% 5em;
-      animation: wiggle 2s linear infinite;
+    &_title{
+    @include flex(row,space-between);
+    color: map-get($colors,black-color);
+    }
     
-  }
-  
+    &_text h2{
+      @include typography(20px,700);
+      color: map-get($colors,black-color);
+      margin-left: 15px;
+      
+    }
+
+    &_text h3{
+      @include typography(18px,400);
+      color: lighten(map-get($colors,black-color),10%);
+      margin-left: 15px;
+      margin-top: -10px;
+    }
+  // first and second card contains the word nouveau
+    &:nth-child(-n+2){
+        &::before{
+          @include typography(14px,600);
+          content: "Nouveau";
+          @include size(50px,20px);
+          top:15px;
+          right: 10px;
+          z-index: 999;
+          background-color:map-get($colors,Tertiaire);
+          padding: 5px 25px 5px 15px;
+          color:map-get($colors,green-color);
+          position: absolute;
+          transform-origin: 50% 5em;
+          animation: wiggle 2s linear infinite;
+      }
   }
 }
