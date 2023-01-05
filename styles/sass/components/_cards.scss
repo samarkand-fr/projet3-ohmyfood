@@ -18,6 +18,10 @@
     &_title{
     @include flex(row,space-between);
     color: map-get($colors,black-color);
+    
+      .heart{
+        bottom:35px;
+      }
     }
     
     &_text h2{

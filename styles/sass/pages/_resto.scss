@@ -5,8 +5,7 @@
  
   &_img{
     @include transform(translateY(-20px));
-    width: $width;
-    object-fit: cover;
+    @include image;
     aspect-ratio: 2/1.5;
   }
 
@@ -25,6 +24,10 @@
       font-family: $logo-family;
       width: $width;
       margin: 10px 0 0 20px;
+
+       & .heart{
+          margin-right: 15px;
+        }
   }
 }
 
