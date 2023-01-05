@@ -39,8 +39,6 @@
       transform: scale(1, 1);
     }
   }
-
- 
   
 //  spinner loader    ----------------
 
@@ -70,8 +68,6 @@
     .ball-loader-ball{
       will-change: transform;
       @include size(calc($width-spinner / 11 * 3),calc($width-spinner / 11 * 3));
-      // height: calc($width-spinner / 11 * 3);
-      // width: calc($width-spinner / 11 * 3);
       border-radius: 50%;
       background-color: map-get($colors,primaire);
       display: inline-block;

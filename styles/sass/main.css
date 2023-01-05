@@ -460,6 +460,9 @@ ul {
   align-items: center;
   color: #101010;
 }
+.resto_card_title .heart {
+  bottom: 35px;
+}
 .resto_card_text h2 {
   font-size: 20px;
   font-weight: 700;
@@ -493,7 +496,7 @@ ul {
 
 .wrapper {
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   overflow-x: hidden;
 }
 
@@ -584,7 +587,7 @@ ul {
   position: absolute;
   cursor: pointer;
   right: 25px;
-  font-size: 30px;
+  font-size: 25px;
   color: #454545;
 }
 .heart__empty {
@@ -741,6 +744,9 @@ ul {
   width: 100%;
   margin: 10px 0 0 20px;
 }
+.resto_title .heart {
+  margin-right: 15px;
+}
 
 .btn_wrapper {
   display: flex;
@@ -769,6 +775,7 @@ ul {
 }
 
 .footer {
+  width: 100%;
   padding: 15px 5px;
   background-color: #454545;
   line-height: 25px;
@@ -779,7 +786,7 @@ ul {
   margin-left: 5px;
 }
 .footer ul li a {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: #FFFFFF;
   margin-bottom: 10px;
@@ -797,92 +804,25 @@ ul {
   color: #FFFFFF;
 }
 .footer_logo {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 200;
   font-family: "Shrikhand", sans-serif;
   margin-bottom: 25px;
   color: #FFFFFF;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 360px) and (max-width: 767px) {
   .wrapper {
-    max-width: 1400px;
-    margin: auto;
-  }
-  .header {
-    text-align: center;
-  }
-  .header_img {
-    width: 60%;
-  }
-  .header_arrow {
-    position: absolute;
-    font-size: 20px;
-    left: 300px;
-    top: 40px;
-  }
-  .functional_section__title {
-    text-align: center;
-    padding: 30px 0;
-  }
-  .functional_section ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 20px;
-  }
-  .functional_section .functional_btn {
     width: 100%;
-    height: auto;
-    padding-right: 40px;
-    padding-left: 40px;
-    gap: 15px;
-    margin: auto;
-    margin-bottom: 20px;
-  }
-  .restaurant_section h1 {
-    align-self: center;
-    padding: 30px 0;
-  }
-  .resto_card_wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    place-items: center;
-  }
-  .resto_img {
-    width: 60%;
-    height: 450px;
-    border-radius: 15px;
-    margin-top: 15px;
-  }
-  .resto_title {
-    transform: translateX(-80px);
-    justify-content: center;
-    margin: 20px;
-  }
-  .resto_title .heart {
-    margin-right: 250px;
-  }
-  .wrapper_meals {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    -moz-column-gap: 15px;
-         column-gap: 15px;
-  }
-  .footer ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    align-items: center;
-  }
-  .footer li:nth-child(1) {
-    margin-top: 25px;
+    margin: 0 auto;
+    overflow-x: hidden;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
+  .wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
   .header {
     text-align: center;
   }
@@ -920,9 +860,87 @@ ul {
     -moz-column-gap: 15px;
          column-gap: 15px;
   }
+  .footer {
+    margin: 0 auto;
+  }
+  .footer ul li:not(:first-child) {
+    display: inline-block;
+    margin-right: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .header {
+    text-align: center;
+  }
+  .header_img {
+    width: 60%;
+  }
+  .header_arrow {
+    position: absolute;
+    font-size: 20px;
+    left: 300px;
+    top: 40px;
+  }
+  .functional_section__title {
+    text-align: center;
+    padding: 30px 0;
+  }
+  .functional_section ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+  }
+  .functional_section .functional_btn {
+    width: 100%;
+    height: auto;
+    padding: 10px 40px;
+    gap: 15px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .restaurant_section h1 {
+    align-self: center;
+    padding: 30px 0;
+  }
+  .resto_card_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    place-items: center;
+  }
+  .resto_img {
+    width: 60%;
+    height: 350px;
+    border-radius: 15px;
+    margin-top: 15px;
+  }
+  .resto_title {
+    transform: translateX(-80px);
+    justify-content: center;
+  }
+  .resto_title .heart {
+    margin-right: 200px;
+  }
+  .wrapper_meals {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
   .footer ul {
-    display: inline-flex;
-    flex: 1;
-    gap: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-items: center;
+  }
+  .footer li:nth-child(1) {
+    margin-top: 25px;
   }
 }/*# sourceMappingURL=main.css.map */
